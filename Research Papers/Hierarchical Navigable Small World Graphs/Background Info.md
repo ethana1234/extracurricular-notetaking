@@ -35,5 +35,5 @@
 * Multi layer linked list
 * Higher layers contain a subset of nodes of the layer below.
 * Made by determining probabilistically the highest layer each node appears in. The higher the node, the less likely a node is to be placed there.
-* Usually $1/2$ is used as the probability a value is moved up to the next layer
+* Usually $1/2$ is used as the probability a value is moved up to the next layer, so for layer $i$, the probability a node appears in that layer is $P(i) = .5^i$.
 ![[Skip List|Illustration of searching for the value 17 in a skip list with 3 layers|900]]
