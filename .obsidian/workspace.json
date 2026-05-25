@@ -6,7 +6,6 @@
       {
         "id": "0a9fb44db1059b4c",
         "type": "tabs",
-        "dimension": 89.84657039711192,
         "children": [
           {
             "id": "568bec0dbe98ce2a",
@@ -14,37 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Research Papers/Hierarchical Navigable Small World Graphs/Background Info.md",
+                "file": "Research Papers/Hierarchical Navigable Small World Graphs/Paper Summary.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Background Info"
-            },
-            "group": "9df55d7cb5002f5f"
-          }
-        ]
-      },
-      {
-        "id": "fb5a5be2ccce11ac",
-        "type": "tabs",
-        "dimension": 10.153429602888087,
-        "children": [
-          {
-            "id": "6bc2a78676779bc3",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "Research Papers/Hierarchical Navigable Small World Graphs/Background Info.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "Outline of Background Info"
-            },
-            "group": "9df55d7cb5002f5f"
+              "title": "Paper Summary"
+            }
           }
         ]
       }
@@ -119,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Research Papers/Hierarchical Navigable Small World Graphs/Background Info.md",
+                "file": "Research Papers/Hierarchical Navigable Small World Graphs/Paper Summary.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Background Info"
+              "title": "Backlinks for Paper Summary"
             }
           },
           {
@@ -211,8 +186,10 @@
   },
   "active": "568bec0dbe98ce2a",
   "lastOpenFiles": [
-    "Research Papers/Hierarchical Navigable Small World Graphs/Skip List.md",
     "Research Papers/Hierarchical Navigable Small World Graphs/Background Info.md",
+    "Research Papers/Hierarchical Navigable Small World Graphs/Paper Summary.md",
+    "NSW.md",
+    "Research Papers/Hierarchical Navigable Small World Graphs/Skip List.md",
     "Research Papers/Hierarchical Navigable Small World Graphs/delaunay_graph.svg",
     "Research Papers/Hierarchical Navigable Small World Graphs/delaunay_vs_knn_proximity_graph.svg",
     "Excalidraw/Drawing 2026-05-17 12.14.36.excalidraw.md",

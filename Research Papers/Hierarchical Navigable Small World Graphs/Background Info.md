@@ -21,7 +21,7 @@
 *  ==Delaunay graphs==:
 	* Ideal graph that would guarantee greedy search finds true nearest neighbor
 	* Not feasible to generate since it requires exhaustive distance calculations
-![[delaunay_graph.svg]]
+![[delaunay_graph.svg|669]]
 * Start at an entry node and traverse the graph to **greedily** find the approximate nearest neighbor(s) of a query vector.
 * *Only* uses the precomputed information in the graph to determine what's "nearby", so there can be trade offs based on how the graph is constructed. Trying to fit the graph to be exact defeats the purpose of proximity graphs, which are meant to provide scalable performance. 
 * Can have trouble with clustered data
@@ -31,6 +31,10 @@
 * Early connections in the graph help globally connects clusters later on thanks to the element of randomness. 
 * Struggles with low dimensional data compared to other methods because of overhead for the graph structure
 * Effective as a distributed search system
+* NSW starts at a random entry node to greedy search. Because this very typically can be a low degree node, this leaves it prone to getting stuck in a local min. It creates those high degree hub nodes, but if the greedy search doesn't reach those, it doesn't matter.
+* Polylogarithimic time complexity comes from:
+	* log time complexity from the average number of hops to traverse greedily
+	* log time complexity to compute distances at each step in the path (this is based on the average node degree)
 ## Skip List
 * Multi layer linked list
 * Higher layers contain a subset of nodes of the layer below.
