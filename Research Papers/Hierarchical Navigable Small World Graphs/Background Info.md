@@ -32,6 +32,10 @@
 * Struggles with low dimensional data compared to other methods because of overhead for the graph structure
 * Effective as a distributed search system
 * NSW starts at a random entry node to greedy search. Because this very typically can be a low degree node, this leaves it prone to getting stuck in a local min. It creates those high degree hub nodes, but if the greedy search doesn't reach those, it doesn't matter.
+* Runs $m$ random searches (multi-searches), this combined with $K$ prevents not getting stuck with a local min. The lower $m$ is, the more likely to get stuck with the wrong answer. The higher $m$ is, the slower the search takes.
+* Keeps a candidate list of size $K$ that helps when search stalls
+	* Candidates are neighbors of previously visited nodes 
+	* When stuck in local min, go back to next best node in candidate list
 * Polylogarithimic time complexity comes from:
 	* log time complexity from the average number of hops to traverse greedily
 	* log time complexity to compute distances at each step in the path (this is based on the average node degree)
