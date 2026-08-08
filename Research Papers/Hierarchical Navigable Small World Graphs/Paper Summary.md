@@ -21,16 +21,16 @@ INSERT(hnsw, q, M, M_max, efConstruction, m_L)
 Input: multilayer graph hnsw, new element q, number of established connections M, maximum number of connections for each element per layer M_max, size of the dynamic candidate list efConstruction, normalization factor for level generation m_L
 Output: updated hnsw with q inserted
 W <- {}
-ep <- get entry point (random?)
+ep <- get entry point // should be single point in top layer
 L <- max layer
 l <- floor(-ln(unif(0..1) * m_L))
 for l_i <- L ... l+1:
 	// Do regular search through layers where new element won't be inserted
-	W.add(SEARCH-LAYER(q, ep, 1, l_i))
-ep <- nearest element from W to q
+	W <- SEARCH-LAYER(q, ep, 1, l_i)
+	ep <- nearest element from W to q
 for l_i <- min(L, l) ... 0:
 	// Insert new node + update edges in each layer it appears in
-	W.add(SEARCH-LAYER(q, ep, efConstruction, l_i))
+	W <- SEARCH-LAYER(q, ep, efConstruction, l_i)
 	neighbors <- SELECT-NEIGHBORS(q, W, M, l_i) // use either select algo
 	for e in neighbors:
 		eConn <- neighborhood(e, l_i)
@@ -52,18 +52,18 @@ C <- ep // candidate nodes
 W <- ep // dynamic list of found nearest neighbors
 while |C| > 0:
 	c <- C.pop(nearestElement(C, q))
-	f <- furtherstElement(W, q)
+	f <- furthestElement(W, q)
 	if distance(c, q) > distance(f, q):
 		break // all neighbors in W are evaluated
 	for e in neighborhood(c, l_c):
 		if e not in v:
 			v.add(e)
-			f <- furtherstElement(W, q)
+			f <- furthestElement(W, q)
 			if distance(e, q) < distance(f, q) or |W| < ef:
 				C.add(e)
 				W.add(e)
 				if |W| > ef:
-					W.pop(furtherstElement(W, q))
+					W.pop(furthestElement(W, q))
 return W
 ```
 
