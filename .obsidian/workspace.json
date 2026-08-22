@@ -6,9 +6,10 @@
       {
         "id": "0a9fb44db1059b4c",
         "type": "tabs",
+        "dimension": 89.84657039711192,
         "children": [
           {
-            "id": "5c767da8e8b420c4",
+            "id": "568bec0dbe98ce2a",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -19,7 +20,31 @@
               },
               "icon": "lucide-file",
               "title": "Chapter 1 Introduction"
-            }
+            },
+            "group": "9df55d7cb5002f5f"
+          }
+        ]
+      },
+      {
+        "id": "fb5a5be2ccce11ac",
+        "type": "tabs",
+        "dimension": 10.153429602888087,
+        "children": [
+          {
+            "id": "6bc2a78676779bc3",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Books/Mitchell Machine Learning/Chapter 1 Introduction.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Chapter 1 Introduction"
+            },
+            "group": "9df55d7cb5002f5f"
           }
         ]
       }
@@ -78,7 +103,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 300
   },
   "right": {
     "id": "f1ff7851a51f1e0d",
@@ -94,7 +119,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Research Papers/Hierarchical Navigable Small World Graphs/Paper Summary.md",
+                "file": "Books/Mitchell Machine Learning/Chapter 1 Introduction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +129,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Paper Summary"
+              "title": "Backlinks for Chapter 1 Introduction"
             }
           },
           {
@@ -113,12 +138,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Research Papers/Hierarchical Navigable Small World Graphs/Background Info.md",
+                "file": "Books/Mitchell Machine Learning/Chapter 1 Introduction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Background Info"
+              "title": "Outgoing links from Chapter 1 Introduction"
             }
           },
           {
@@ -156,13 +181,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Research Papers/Hierarchical Navigable Small World Graphs/Background Info.md",
+                "file": "Books/Mitchell Machine Learning/Chapter 1 Introduction.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Background Info"
+              "title": "Outline of Chapter 1 Introduction"
             }
           }
         ]
@@ -184,20 +209,17 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "5c767da8e8b420c4",
+  "active": "568bec0dbe98ce2a",
   "lastOpenFiles": [
+    "Books/Mitchell Machine Learning/Exercise1.3.png",
+    "Research Papers/Hierarchical Navigable Small World Graphs/Background Info.md",
     "Research Papers/Hierarchical Navigable Small World Graphs/Implementation Review.md",
+    "Research Papers/Hierarchical Navigable Small World Graphs/Paper Summary.md",
+    "Research Papers/Hierarchical Navigable Small World Graphs/Skip List.md",
     "Books/Mitchell Machine Learning/Chapter 1 Introduction.md",
-    "Books/Mitchell Machine Learning/Untitled",
     "Books/Mitchell Machine Learning",
     "Books",
-    "Research Papers/Hierarchical Navigable Small World Graphs/Paper Summary.md",
-    "Research Papers/Hierarchical Navigable Small World Graphs/Background Info.md",
-    "Untitled 1.md",
-    "Untitled.md",
     "Research Papers/Hierarchical Navigable Small World Graphs/delaunay_graph.svg",
-    "NSW.md",
-    "Research Papers/Hierarchical Navigable Small World Graphs/Skip List.md",
     "Research Papers/Hierarchical Navigable Small World Graphs/delaunay_vs_knn_proximity_graph.svg",
     "Excalidraw/Drawing 2026-05-17 12.14.36.excalidraw.md",
     "Excalidraw/Drawing 2026-05-17 11.35.41.excalidraw.md",
