@@ -1,3 +1,4 @@
+## Notes
 - Machine learning algorithms/programs are focused on self improvement at some task
 - ML problems can be broken down into:
 	- A task

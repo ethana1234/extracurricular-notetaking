@@ -1,0 +1,31 @@
+## Notes
+- Concept learning: Inferring a boolean-valued function from training examples
+- Inductive learning hypothesis: Any $h$ found to approximate $c$ well of a sufficiently large enough training dataset $D$ will also approximate $c$ well over unobserved data points
+- We can treat concept learning as a search over $H$ to find the $h$ that approximates $c$ well
+- $h$ is satisfied by data point $x$ if $h(x) = 1$ aka positive label
+- $h$ is consistent with $c$ if $h(x) = c(x) \forall \langle x, c(x) \rangle \in D$
+- Hypotheses can be partially ordered, where some are more general than others. One hypothesis $h_j$ is more general than another hypothesis $h_k$ if $h_j$ labels all of the same $x \in X$ positive as $h_k$ (remember output of concept learning task is boolean)
+- Find-S
+	- Algorithm for finding the maximally specific hypothesis
+	- Only cares about positively labeled training data
+	- Only finds one maximally specific $h$ based on $D$
+	- Very prone to overfitting $D$, and is useless if $D$ has labeling errors
+	- Example of algorithm searching "top down" through $H$, starting general and getting more specific
+- Candidate-Elimination
+	- Algorithm finds set of hypotheses instead of single $h$
+	- Version Space ($VS_{H,D}$) is a subset of $H$ that contains all $h$ that are consistent. Candidate-Elimination is about finding $VS_{H,D}$
+	- The general boundary ($G$) is a subset of $H$ that contains all the maximally general $h$ that are consistent.
+	- The specific boundary ($S$) is a subset of $H$ that contains all the maximally specific $h$ that are consistent
+	- Go through each training data point $d$. Generalize $S$ as much as possible to remain consistent, and specify $G$ as much as possible to remain consistent
+	- The result becomes a $G$ and $S$ that both contain only consistent $h$, while also defining boundaries where every $h$ more general than $S$ and more specific than $G$ is also consistent, aka the full version space 
+- Inductive Bias: Without just resorting to mathematical terminology, this is the additional information a learning algorithm holds that is outside of simply mapping training data to labels. A rote learning exercise that maps $L(x) = c(x) \forall \langle x, c(x) \rangle \in D$ is the learning algorithm with no bias, but notice how it cannot do anything with data $d \notin D$ 
+- Example is the $EnjoySport$ task
+	- Each training example $x_i$ has a value for Sky, Airtemp, Humidity, Wind, Water, and Forecast with an output label $EnjoySport: y_i \in \langle Yes, No\rangle$ . Note that all the attributes of training examples are one of a discrete set of possible values
+	- Target function $c(x)$ would correctly classify $y$ for every $x \in X$ 
+	- The set of all hypotheses $H$ is defined as every combination of discrete values for an $EnjoySport$ data point, in addition to each attribute being either the general value $?$ aka any possible value for that attribute, and $\varnothing$ for no value for that attribute.
+		- $h = \langle ?,?,?,?,?,? \rangle$ would be satisfied by any $x$
+		- $h = \langle \varnothing, \varnothing, \varnothing, \varnothing, \varnothing, \varnothing \rangle$ would be satisfied by nothing
+		- Example hypothesis $h = \langle Sunny, Warm, ?, Strong, Warm, Same \rangle$ means any data point with those exact Sky, Airtemp, Wind, Water, and Forecast values (Humidity value doesn't matter) would be labeled "Yes" by $h$, otherwise would be labeled "No". This label is represented by $h(x_i)$
+	- The concept learning task would therefore be an exercise in finding a hypothesis $h \in H$ where $h(x) = c(x)  \forall  x \in X$
+	- The issue with Candidate-Elimination algorithm with this task is that we've have defined $h$ to only allow for either a single value, any value, or no value for each attribute. What if there's a specific subset of possible labels for "Sky" that is part of $c$? No $h$ would satisfy because it could only be one of the labels or all of the labels (include ones that necessarily mean it's a negative example)
+	- If we were to change the task to make $H$ a conjunction of these tuples instead of just a single tuple, we could represent this, however Candidate-Elimination then returns a version space that is overfit to the training data, and can't label any new examples. This illustrates why learning algorithms must have some amount of bias. The unbiased formulation for $H$ doesn't allow for unseen data to be labeled
