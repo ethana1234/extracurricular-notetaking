@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Research Papers/Hierarchical Navigable Small World Graphs/Background Info.md",
+                "file": "Books/Mitchell Machine Learning/Chapter 1 Introduction.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Background Info"
+              "title": "Chapter 1 Introduction"
             }
           }
         ]
@@ -186,10 +186,15 @@
   },
   "active": "5c767da8e8b420c4",
   "lastOpenFiles": [
-    "Untitled 1.md",
-    "Untitled.md",
+    "Research Papers/Hierarchical Navigable Small World Graphs/Implementation Review.md",
+    "Books/Mitchell Machine Learning/Chapter 1 Introduction.md",
+    "Books/Mitchell Machine Learning/Untitled",
+    "Books/Mitchell Machine Learning",
+    "Books",
     "Research Papers/Hierarchical Navigable Small World Graphs/Paper Summary.md",
     "Research Papers/Hierarchical Navigable Small World Graphs/Background Info.md",
+    "Untitled 1.md",
+    "Untitled.md",
     "Research Papers/Hierarchical Navigable Small World Graphs/delaunay_graph.svg",
     "NSW.md",
     "Research Papers/Hierarchical Navigable Small World Graphs/Skip List.md",
